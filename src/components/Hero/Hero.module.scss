@@ -1,0 +1,9 @@
+@import '../../global.module.scss';
+
+.wrapper{
+  margin-top: 20px;
+  >img{
+    height: 50px;
+    width: 50px;
+  }
+}

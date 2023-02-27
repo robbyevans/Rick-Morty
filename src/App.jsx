@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Characters from './components/Characters/Characters'
 import Locations from './components/Locations/Locations'
 import './global.module.scss'
+import Foot from './components/Footer/Foot';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/Locations' element={<Locations/>}/>
         <Route path='/Characters' element={<Characters/>}/>
       </Routes>
+      <Foot/>
 
     </Router>
     </>
