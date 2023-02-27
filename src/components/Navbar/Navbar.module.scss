@@ -1,0 +1,36 @@
+@import '../../global.module.scss';
+
+.wrapper {
+border: 1px solid black;
+height: 10vh;
+display: flex;
+align-items: center;
+justify-content: center;
+
+  .logo{
+    margin-right: 50px;
+
+  }
+  .navlink{
+    margin: 10px;
+    align-self: center;
+    justify-self: center;
+    
+    text-decoration: none;
+    >:nth-child(1){
+      text-decoration: none;
+      margin-right: 10px;
+      padding: 10px;
+      background-color: blue;
+      color: #ffff;
+
+    }
+    >:nth-child(2){
+      text-decoration: none;
+      margin-right: 10px;
+      padding: 10px;
+      background-color: blue;
+      color: #ffff;
+    }
+  }
+}
