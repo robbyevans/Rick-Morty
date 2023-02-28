@@ -1,19 +1,32 @@
 import React,{useState,useEffect} from 'react'
 import css from './Characters.module.scss'
 import {Card} from 'flowbite-react'
+import Search from '../Search/Search';
+
 
 function Characters() {
 
-  const[characters,setCharacters]=useState([]);
+  let [pageNumber, updatePageNumber] = useState(1);
+  let [nameSearch, setNameSearch] = useState("");
+  let [status, updateStatus] = useState("");
+  let [gender, updateGender] = useState("");
+  let [species, updateSpecies] = useState("");
+  let [data, setData] = useState([]);
+  
 
+
+  let link = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${nameSearch}&status=${status}&gender=${gender}&species=${species}`;
   useEffect(()=>{
-    fetch (`https://rickandmortyapi.com/api/character/${[1,2,3,4,5,6,7,8,9,10]}`).then((r)=>{
+    fetch (link).then((r)=>{
       if(r.ok){
-        r.json().then((character)=>setCharacters(character));
+        r.json().then((data)=>setData(data.results));
       }
       
     });
     },[]);
+
+  
+
 
   return (
     <div className={css.wrapper}>
@@ -21,10 +34,16 @@ function Characters() {
         <span className={css.secondaryText} >Rick & Morty.</span>
         <span className={css.secondaryText} >All your Rick & morty characters in one place</span>
       </div>
+
+      {/* search component */}
+      <Search/>
+      {/* search component */}
+
       <div className={css.body}>
+
         {
-          characters.map((data,i)=>{
-            
+          data.map((data)=>{
+            console.log(data)
            return( <div className={css.card}>
              <div className="max-w-sm">
                <Card
@@ -43,8 +62,9 @@ function Characters() {
                </Card>
                </div>
            </div>
-  )
-          })
+              )
+            }
+          )
         }
       </div>
     </div>

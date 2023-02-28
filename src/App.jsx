@@ -4,18 +4,24 @@ import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
 import Characters from './components/Characters/Characters'
 import Locations from './components/Locations/Locations'
+import Episodes from './components/Episodes/Episodes';
 import './global.module.scss'
 import Foot from './components/Footer/Foot';
 
 function App() {
+
+ 
+ 
+
   return (
     <>
     <Router>
       <Navbar/>
       <Hero/>
       <Routes>
-        <Route path='/Locations' element={<Locations/>}/>
-        <Route path='/Characters' element={<Characters/>}/>
+        <Route path='/' element={<Characters />}/>
+        <Route path='/Locations' element={<Locations />}/>
+        <Route path='/Episodes' element={<Episodes/>}/>
       </Routes>
       <Foot/>
 

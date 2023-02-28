@@ -102,22 +102,22 @@ $secondary-white: #E7E7E7;
 }
 
 
-.flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .flexCenter {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
-.flexStart {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
+// .flexStart {
+//   display: flex;
+//   justify-content: start;
+//   align-items: center;
+// }
 
-.flexEnd {
-  display: flex;
-  justify-items: end;
-}
+// .flexEnd {
+//   display: flex;
+//   justify-items: end;
+// }
 
 .primaryText {
   @media (max-width: $sm) {

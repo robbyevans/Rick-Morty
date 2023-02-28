@@ -9,8 +9,9 @@ function Navbar() {
         <span className={css.logo}>logo</span>
         
           <div className={css.navlink}>
+            <NavLink  to="/">Characters</NavLink>
             <NavLink  to="/Locations">Locations</NavLink>
-            <NavLink  to="/Characters">Characters</NavLink>
+            <NavLink  to="/Episodes">Episodes</NavLink>
           </div>
           
     </div>
