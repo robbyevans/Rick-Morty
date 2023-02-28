@@ -3,45 +3,40 @@ import css from './Locations.module.scss'
 import { Card } from 'flowbite-react';
 
 function Locations() {
-
+  let [results, setResults] = React.useState([]);
   let [number, setNumber] = useState(1);
   let[data,setData]=useState([]);
-  let[member,setMember]=useState([])
+  // let[member,setMember]=useState([])
 
 
   let api = `https://rickandmortyapi.com/api/location/${number}`;
 
-    useEffect(()=>{
-      (async function(){
-        let data = await fetch(api).then((resp)=>resp.json());
-        setData(data)
-      }
+  useEffect(() => {
+    (async function () {
+      let data = await fetch(api).then((res) => res.json());
+      setData(data);
 
-       )();
-    }, [api]
-    );
-
-    
-     
-     
-
- 
+      let a = await Promise.all(
+        data.residents.map((x) => {
+          return fetch(x).then((res) => res.json());
+        })
+      );
+      setResults(a);
+    })();
+  }, [api]);
 
   return (
     <div className={css.wrapper}>
-  <div className={css.body}>
-
   <div className={css.heading}>
         <span className={css.secondaryText} >Location:{data.name}</span>
         <span className={css.secondaryText} >Dimension:{data.dimension}</span>
         <span className={css.secondaryText} >Type:{data.type}</span>
-      </div>
+      </div>  
+  <div className={css.body}>
 
-
-    
 
   {
-    member.map((data)=>{
+    results.map((data)=>{
     console.log(data)
     return( <div className={css.card}>
      <div className="max-w-sm">
