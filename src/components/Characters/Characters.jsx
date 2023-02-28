@@ -6,26 +6,23 @@ import Search from '../Search/Search';
 
 function Characters() {
 
-  let [pageNumber, updatePageNumber] = useState(1);
+  let [pageNumber, setPageNumber] = useState(1);
   let [nameSearch, setNameSearch] = useState("");
-  let [status, updateStatus] = useState("");
-  let [gender, updateGender] = useState("");
-  let [species, updateSpecies] = useState("");
+  let [status, setStatus] = useState("");
+  let [gender, setGender] = useState("");
+  let [species, setSpecies] = useState("");
   let [data, setData] = useState([]);
   
 
 
-  let link = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${nameSearch}&status=${status}&gender=${gender}&species=${species}`;
-  useEffect(()=>{
-    fetch (link).then((r)=>{
-      if(r.ok){
-        r.json().then((data)=>setData(data.results));
-      }
-      
-    });
-    },[]);
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${nameSearch}&status=${status}&gender=${gender}&species=${species}`;
+  useEffect(() => {
+    (async function () {
+      let data = await fetch(api).then((res) => res.json());
+      setData(data.results);
+    })();
+  }, [api]);
 
-  
 
 
   return (
@@ -36,14 +33,14 @@ function Characters() {
       </div>
 
       {/* search component */}
-      <Search/>
+      <Search setNameSearch={setNameSearch} setPageNumber={setPageNumber}/>
       {/* search component */}
 
       <div className={css.body}>
 
         {
-          data.map((data)=>{
-            console.log(data)
+         data && data.map((data)=>{
+            
            return( <div className={css.card}>
              <div className="max-w-sm">
                <Card

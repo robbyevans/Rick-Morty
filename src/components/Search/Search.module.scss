@@ -19,19 +19,20 @@
       border-radius: 5px;
       border: 1px solid grey;
       width:400px;
+      
      
     }
   }
-}
-.btn{
-  border: 1px solid darkblue;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 5px;
-  color: #fff;
-  background-color: darkblue;
-}
-.btn:hover{
-  color: #fff;
-  background-color:#272787;
+  .btn{
+    border: 1px solid darkblue;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: darkblue;
+  }
+  .btn:hover{
+    color: #fff;
+    background-color:#272787;
+  }
 }

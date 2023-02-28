@@ -1,0 +1,39 @@
+@import '../../global.module.scss';
+
+.wrapper{
+  margin-top: 150px;
+
+  .heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    >:nth-child(1){
+     
+      color: $primary;
+    }
+    >:nth-child(2){
+      @media (max-width: $sm) {
+        font-size: 1.1rem;
+        line-height: 10px;
+      }
+      line-height: 30px;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: $secondary;
+    }
+  }
+  .body{
+    border: 1px solid violet;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .card{
+      margin: 10px;
+    }
+  }
+}
+
