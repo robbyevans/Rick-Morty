@@ -27,15 +27,26 @@
   }
 
   .body{
+    
     border: 1px solid violet;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 50px;
     .card{
+      height: fit-content;
       margin: 10px;
       border: 1px solid darkblue;
       border-radius: 10px;
     }
+  }
+  .pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
   }
 }

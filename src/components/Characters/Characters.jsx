@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import css from './Characters.module.scss'
 import {Card} from 'flowbite-react'
+import Pagination from "@mui/material/Pagination"
 import Search from '../Search/Search';
 
 
@@ -12,6 +13,11 @@ function Characters() {
   let [gender, setGender] = useState("");
   let [species, setSpecies] = useState("");
   let [data, setData] = useState([]);
+
+  function handleChange(e,p){
+    console.log(e,p)
+    setPageNumber(p)
+  }
   
 
 
@@ -22,6 +28,7 @@ function Characters() {
       setData(data.results);
     })();
   }, [api]);
+
 
 
 
@@ -41,7 +48,7 @@ function Characters() {
         {
          data && data.map((data)=>{
             
-           return( <div className={css.card}>
+           return( <div className={` ${css.card}`}>
              <div className="max-w-sm">
                <Card
                  imgAlt="picture of a Rick & Mort character"
@@ -64,8 +71,17 @@ function Characters() {
           )
         }
       </div>
+
+      <div className={css.pagination}>
+        <Pagination
+        count={42}
+        color="primary"
+        onChange={handleChange}/>
+      </div>
+
     </div>
   )
 }
 
 export default Characters
+
