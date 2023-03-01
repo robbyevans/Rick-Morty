@@ -1,15 +1,17 @@
 import React, { useState,useEffect } from 'react'
 import css from './Locations.module.scss'
 import { Card } from 'flowbite-react';
+import Pagination from "@mui/material/Pagination"
 
 function Locations() {
   let [results, setResults] = React.useState([]);
   let [number, setNumber] = useState(1);
   let[data,setData]=useState([]);
+  let [pageNumber, setPageNumber] = useState(1);
   // let[member,setMember]=useState([])
 
 
-  let api = `https://rickandmortyapi.com/api/location/${number}`;
+  let api = `https://rickandmortyapi.com/api/location/${number}/?page=${pageNumber}`;
 
   useEffect(() => {
     (async function () {
@@ -24,6 +26,11 @@ function Locations() {
       setResults(a);
     })();
   }, [api]);
+
+
+  function handleChange(e,p){
+    setPageNumber(p)
+  }
 
   return (
     <div className={css.wrapper}>
@@ -59,8 +66,14 @@ function Locations() {
       )
     }
   )
-}
-</div>
+  }
+    </div>
+    <div className={css.pagination}>
+        <Pagination
+        count={42}
+        color="primary"
+        onChange={handleChange}/>
+      </div>
     </div>
   )
 }
