@@ -7,7 +7,9 @@ import css from './Navbar.module.scss'
 function Navbar() {
   return (
     <div className={css.wrapper}>
-        <span className={css.logo}>logo</span>
+        <span className={css.logo}>
+          <img src='./vite.svg'/>
+        </span>
         
           <div className={css.navlink}>
             <NavLink className={css.btn}  to="/">Characters</NavLink>

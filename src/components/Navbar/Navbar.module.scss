@@ -1,7 +1,8 @@
 @import '../../global.module.scss';
 
 .wrapper {
-border: 1px solid black;
+  margin-top: 20px;
+border-bottom: 1px solid black;
 height: 10vh;
 display: flex;
 align-items: center;
@@ -11,6 +12,8 @@ position: relative;
   .logo{
     position: absolute;
     left: 20px;
+    height: 60px;
+    width: 60px;
 
   }
   .navlink{
@@ -26,9 +29,11 @@ position: relative;
     justify-content:center;
     flex-direction: row;
     .btn{
-      margin: 5px;
+      margin: 8px;
       font-weight:500;
       color:$primary;
+    }
+    .btn:hover{
       text-decoration: underline;
     }
     

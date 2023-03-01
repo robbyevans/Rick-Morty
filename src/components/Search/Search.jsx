@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './Search.module.scss'
-import {Button} from 'flowbite-react'
+import { BiSearchAlt2 } from "react-icons/bi";
 
 function Search({setNameSearch, setPageNumber}) {
 
@@ -25,7 +25,10 @@ function Search({setNameSearch, setPageNumber}) {
         {/* <span>{BiSearch}</span> */}
         <div>
   </div>
-        <button className={css.btn} type="submit">Search</button>
+
+        <button  type="submit">
+        <BiSearchAlt2 className="mr-2 h-5 w-5" />
+          Search</button>
        </form>
       </div>
       {/* end of search component */}
