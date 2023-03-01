@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Characters from './components/Characters/Characters'
 import Locations from './components/Locations/Locations'
 import Episodes from './components/Episodes/Episodes';
+import Example from './components/Example';
 import './global.module.scss'
 import Foot from './components/Footer/Foot';
 
@@ -21,9 +22,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Characters />}/>
         <Route path='/Locations' element={<Locations />}/>
+        <Route path="/:id" element={<Characters />}/>
         <Route path='/Episodes' element={<Episodes/>}/>
       </Routes>
       <Foot/>
+      <Example/>
 
     </Router>
     </>
@@ -31,3 +34,5 @@ function App() {
 }
 
 export default App
+
+
