@@ -2,6 +2,7 @@ import React from 'react'
 import {useState,useEffect} from 'react'
 import {NavLink} from "react-router-dom"
 import css from './Navbar.module.scss'
+// import {Button} from 'flowbite-react'
 
 function Navbar() {
   return (
@@ -9,9 +10,9 @@ function Navbar() {
         <span className={css.logo}>logo</span>
         
           <div className={css.navlink}>
-            <NavLink  to="/">Characters</NavLink>
-            <NavLink  to="/Locations">Locations</NavLink>
-            <NavLink  to="/Episodes">Episodes</NavLink>
+            <NavLink className={css.btn}  to="/">Characters</NavLink>
+            <NavLink className={css.btn}  to="/Locations">Locations</NavLink>
+            <NavLink className={css.btn}  to="/Episodes">Episodes</NavLink>
           </div>
           
     </div>

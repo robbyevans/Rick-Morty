@@ -1,6 +1,20 @@
 @import '../../global.module.scss';
 
 .searchbar{
+
+  @media (max-width: $sm),
+  (max-width: $md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .formcontrol{
+      min-width: 450px;
+
+      >input{
+        padding: 5px;
+      }
+    }
+  }
   border: 1px solid red;
   display: flex;
   align-items: center;
@@ -9,30 +23,20 @@
     border: 1px solid black;
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    // padding: 10px;
     align-items: center;
     justify-content: center;
-    // width:550px;
+    width: 70%;
     >input{
       padding: 10px;
       margin:7px;
       border-radius: 5px;
       border: 1px solid grey;
-      width:400px;
+      // width:400px;
+      width: 50%;
       
      
     }
   }
-  .btn{
-    border: 1px solid darkblue;
-    padding: 10px;
-    margin: 20px;
-    border-radius: 5px;
-    color: #fff;
-    background-color: darkblue;
-  }
-  .btn:hover{
-    color: #fff;
-    background-color:#272787;
-  }
+ 
 }
