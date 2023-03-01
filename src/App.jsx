@@ -8,6 +8,7 @@ import Episodes from './components/Episodes/Episodes';
 import Example from './components/Example';
 import './global.module.scss'
 import Foot from './components/Footer/Foot';
+import Example2 from './components/Example2';
 
 function App() {
 
@@ -22,11 +23,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Characters />}/>
         <Route path='/Locations' element={<Locations />}/>
-        <Route path="/:id" element={<Characters />}/>
+        {/* <Route path="/:id" element={<Example2 />}/> */}
         <Route path='/Episodes' element={<Episodes/>}/>
       </Routes>
       <Foot/>
       <Example/>
+      {/* <Example2/> */}
 
     </Router>
     </>

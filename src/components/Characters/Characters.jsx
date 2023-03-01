@@ -23,7 +23,7 @@ function Characters() {
   useEffect(()=>{
     setlocationID(locationId.id)
     console.log(locationID)
-  },[locationID])
+  },[locationId])
 
 
   //test facility do not tamper !!! dangerous
@@ -33,19 +33,19 @@ function Characters() {
 
 //   useEffect(()=>{
 
-//     if(locationID>=0){
+//     if(locationID){
 //       console.log("data from location card is firing now"),
 //       (async function () {
 //           let data = await fetch(`https://rickandmortyapi.com/api/location/${locationID}`).then((res) => res.json());
-//             console.log(data.residents);
-//             console.log(data)
+//             // setData(data.residents);
+//             // console.log(data)
 //             // console.log(data.residents)
 //               let a = await Promise.all(
-//           data.results.map((x) => {
+//           data.residents.map((x) => {
 //            return fetch(x).then((res) => res.json());
 //          })
 //        );
-//       setResults(a);
+//       setData(a);
 //           })();
 //           // setlocationID(false)
        
@@ -58,9 +58,12 @@ function Characters() {
 //       })();
 //       // setlocationID(false)
 //     }
-//   },[locationID])
+//   },[locationId])
 
-//*****//end of test facility///**** */
+//   console.log(data)
+//   // console.log(results)
+
+// //*****//end of test facility///**** */
 
 
  
