@@ -11,9 +11,10 @@ function Foot() {
   <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
     <Footer.Brand
       href="https://flowbite.com"
-      src="https://flowbite.com/docs/images/logo.svg"
+      src="./rick-icon.png"
       alt="Flowbite Logo"
-      name="Flowbite"
+      name="Rick & Morty"
+      className={css.logo}
     />
     <Footer.LinkGroup>
       <Footer.Link href="#">
@@ -33,8 +34,8 @@ function Foot() {
   <Footer.Divider />
   <Footer.Copyright
     href="#"
-    by="Flowbite™"
-    year={2022}
+    by="Rick & Morty™"
+    year={2023}
   />
 </div>
 </Footer>
