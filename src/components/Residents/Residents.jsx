@@ -70,6 +70,20 @@ function Residents() {
                  imgAlt="picture of a Rick & Mort character"
                  imgSrc={image}
                >
+
+                {/* test facility */}
+                {(() => {
+          if (data.status === "Dead") {
+            return <div className={`${css.badge} redColor `}>{data.status}</div>;
+          }
+           else if (data.status === "Alive") {
+            return <div className={`${css.badge} greenColor `}>{data.status}</div>;
+          } 
+          else {
+            return <div className={` ${css.badge} greyColor `}>{data.status}</div>;
+          }
+        })()}
+                  {/* end of test facility */}
                  <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                    {name}
                  </h5>
