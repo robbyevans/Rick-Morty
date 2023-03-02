@@ -1,19 +1,19 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
-.wrapper{
+.wrapper {
   margin-top: 50px;
 
-  .heading{
+  .heading {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    >:nth-child(1){
+    > :nth-child(1) {
       color: darkblue;
     }
 
-    .text{
+    .text {
       @media (max-width: $sm) {
         font-size: 1.1rem;
         line-height: 25px;
@@ -25,12 +25,10 @@
       font-size: 1.3rem;
       font-weight: 400;
       color: $secondary;
-
     }
   }
 
-  .body{
-    
+  .body {
     // border: 1px solid violet;
     display: flex;
     align-items: center;
@@ -38,14 +36,14 @@
     flex-wrap: wrap;
     padding-left: 50px;
     padding-right: 50px;
-    .card{
+    .card {
       height: fit-content;
       margin: 10px;
       border: 1px solid darkblue;
       border-radius: 10px;
       position: relative;
 
-      .badge{
+      .badge {
         position: absolute;
         color: #fff;
         padding: 2px;
@@ -59,16 +57,13 @@
         border-bottom-left-radius: 50px;
         border-top-left-radius: 50px;
         // background-color: green;
-       
       }
     }
   }
-  .pagination{
+  .pagination {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    
   }
-  
 }

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Episodes() {
-  return (
-    <div>Episodes</div>
-  )
+  return <div>Episodes</div>;
 }
 
-export default Episodes
+export default Episodes;

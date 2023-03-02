@@ -1,28 +1,25 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
-.searchbar{
-
-  @media (max-width: $sm),
-  (max-width: $md) {
+.searchbar {
+  @media (max-width: $sm), (max-width: $md) {
     display: flex;
     align-items: center;
     justify-content: center;
-    .formcontrol{
+    .formcontrol {
       min-width: 450px;
 
-
-      >input{
+      > input {
         padding: 5px;
       }
     }
   }
- 
+
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  .formcontrol{
+  .formcontrol {
     // border: 1px solid black;
     display: flex;
     flex-direction: row;
@@ -30,15 +27,15 @@
     align-items: center;
     justify-content: center;
     width: 70%;
-    >input{
+    > input {
       padding: 10px;
-      margin:7px;
+      margin: 7px;
       border-radius: 5px;
       border: 1px solid grey;
       // width:400px;
-      width: 50%; 
+      width: 50%;
     }
-    >button{
+    > button {
       display: flex;
       align-items: center;
       border: 1px solid grey;
@@ -49,5 +46,4 @@
       background-color: darkblue;
     }
   }
- 
 }

@@ -1,21 +1,24 @@
-import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import css from './Filter.module.scss'
+import * as React from "react";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import css from "./Filter.module.scss";
 
-export default function Species({setSpecies}) {
-
+export default function Species({ setSpecies }) {
   const handleChange = (event) => {
     setSpecies(event.target.value);
   };
 
   return (
-    <FormControl sx={{ m: 1, minWidth: 140 }} size="small" className={css.formControl}>
-      <InputLabel
+    <FormControl
+      sx={{ m: 1, minWidth: 140 }}
+      size="small"
       className={css.formControl}
-       id="demo-select-small">Species</InputLabel>
+    >
+      <InputLabel className={css.formControl} id="demo-select-small">
+        Species
+      </InputLabel>
       <Select
         labelId="demo-select-small"
         id="demo-select-small"

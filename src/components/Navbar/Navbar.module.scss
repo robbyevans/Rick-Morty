@@ -1,42 +1,37 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
 .wrapper {
   margin-top: 20px;
-border-bottom: 1px solid black;
-height: 10vh;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
+  border-bottom: 1px solid black;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 
-  .logo{
+  .logo {
     position: absolute;
     left: 20px;
     height: 60px;
     width: 60px;
-
   }
-  .navlink{
+  .navlink {
     position: absolute;
     right: 20px;
-    @media (max-width: $sm),
-    (max-width: $md) {
-     padding: 10px;
-
+    @media (max-width: $sm), (max-width: $md) {
+      padding: 10px;
     }
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     flex-direction: row;
-    .btn{
+    .btn {
       margin: 8px;
-      font-weight:500;
-      color:$primary;
+      font-weight: 500;
+      color: $primary;
     }
-    .btn:hover{
+    .btn:hover {
       text-decoration: underline;
     }
-    
   }
- 
 }

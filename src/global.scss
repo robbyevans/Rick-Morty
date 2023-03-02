@@ -1,20 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap");
 
-*{
+* {
   // background-color: #131528;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
-$sm :640px;
-$md : 768px;
-$lg : 1024px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
 $xl: 1280px;
 $xxl: 1536px;
 $primary: darkblue;
 // $primary:#ff0000;
 // $secondary: #286F6C;
-$secondary:#333333;
-$secondary-white: #E7E7E7;
-
+$secondary: #333333;
+$secondary-white: #e7e7e7;
 
 .bg-primary {
   background-color: red;
@@ -34,9 +33,7 @@ $secondary-white: #E7E7E7;
     padding: 4rem;
   }
 
-
-  @media (min-width: $xl),
-  (min-width: $md) {
+  @media (min-width: $xl), (min-width: $md) {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
@@ -46,8 +43,6 @@ $secondary-white: #E7E7E7;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-
-
 
 .xPaddings {
   @media (min-width: $sm) {
@@ -77,7 +72,7 @@ $secondary-white: #E7E7E7;
 }
 
 .topPaddings {
-  @media (min-width : $sm) {
+  @media (min-width: $sm) {
     padding-top: 4rem;
   }
 
@@ -88,9 +83,8 @@ $secondary-white: #E7E7E7;
   padding-top: 3rem;
 }
 
-
 .bottomPaddings {
-  @media (min-width : $sm) {
+  @media (min-width: $sm) {
     padding-bottom: 4rem;
   }
 
@@ -100,7 +94,6 @@ $secondary-white: #E7E7E7;
 
   padding-bottom: 3rem;
 }
-
 
 // .flexCenter {
 //   display: flex;
@@ -121,7 +114,7 @@ $secondary-white: #E7E7E7;
 
 .primaryText {
   @media (max-width: $sm) {
-    font-size: 2.0rem;
+    font-size: 2rem;
   }
   font-size: 3rem;
   font-weight: bold;
@@ -143,13 +136,12 @@ $secondary-white: #E7E7E7;
   top: -100px;
   visibility: hidden;
 }
-.redColor{
+.redColor {
   background-color: red;
-
 }
-.greenColor{
+.greenColor {
   background-color: green;
 }
-.greyColor{
+.greyColor {
   background-color: grey;
 }
