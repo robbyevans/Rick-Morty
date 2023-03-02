@@ -5,6 +5,7 @@ import {Card} from 'flowbite-react'
 import Pagination from "@mui/material/Pagination"
 import Search from '../Search/Search';
 import Filter from '../Filter/Filter'
+import BasicModal from '../Modal/BasicModal'
 
 
 function Characters() {
@@ -16,9 +17,7 @@ function Characters() {
   const [species, setSpecies] = useState("");
   const [data, setData] = useState([]);
   let [results, setResults] = React.useState([]);
-  
-
-
+ 
 
 
       //pagination
@@ -56,16 +55,20 @@ function Characters() {
 
       <div className={css.body}>
 
+      
+
         {
-         data && data.map((data)=>{
-            
+        
+         data && data.map((data)=>{    
            return( <div className={` ${css.card}`}>
-             <div className="max-w-sm">
+               <div className="max-w-sm">
+               
                <Card
                  imgAlt="picture of a Rick & Mort character"
                  imgSrc={data.image}
+                 
                >
-                  {/* test facility */}
+                
                   {(() => {
           if (data.status === "Dead") {
             return <div className={`${css.badge} redColor `}>{data.status}</div>;
@@ -77,19 +80,22 @@ function Characters() {
             return <div className={` ${css.badge} greyColor `}>{data.status}</div>;
           }
         })()}
-                  {/* end of test facility */}
+                
 
-
+                  
                  <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                    {data.name}
                  </h5>
-                 {/* <p>Status: {data.status}</p> */}
                  <p>Species: {data.species}</p>
                  <p>Gender: {data.gender}</p>
                  <p className="font-normal text-gray-700 dark:text-gray-400">
                    Origin:{data.origin.name}
                  </p>
+                 {/* <BasicModal data={data}/> */}
                </Card>
+               
+               
+               
                </div>
            </div>
               )

@@ -3,6 +3,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import css from './Filter.module.scss'
 
 export default function Species({setSpecies}) {
 
@@ -11,8 +12,10 @@ export default function Species({setSpecies}) {
   };
 
   return (
-    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-      <InputLabel id="demo-select-small">Species</InputLabel>
+    <FormControl sx={{ m: 1, minWidth: 140 }} size="small" className={css.formControl}>
+      <InputLabel
+      className={css.formControl}
+       id="demo-select-small">Species</InputLabel>
       <Select
         labelId="demo-select-small"
         id="demo-select-small"

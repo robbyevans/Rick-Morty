@@ -9,7 +9,7 @@ import './global.scss'
 import './Index.css'
 import Foot from './components/Footer/Foot';
 import Residents from './components/Residents/Residents';
-import Example from './components/Example';
+import BasicModal from './components/Modal/BasicModal';
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
         <Route path='/Episodes' element={<Episodes/>}/>
       </Routes>
       <Foot/>
-      <Example/>
+      {/* <BasicModal/> */}
       
 
     </Router>

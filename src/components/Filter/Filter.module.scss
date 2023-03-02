@@ -1,6 +1,12 @@
 @import '../../global.scss';
 
+
+
+
 .wrapper{
+  margin-bottom: 50px;
+  position: relative;
+
   @media 
   (max-width: 500px) {
     position:relative;
@@ -17,8 +23,7 @@
     }
 
   }
-  margin-bottom: 50px;
-  position: relative;
+
 
   >button{
     border-radius: 5px;
@@ -36,8 +41,23 @@
   }
   .options{
     display: flex;
+    // border: 1px solid violet;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding-top: 30px;
+
+  }
+  .formControl{
+    font-family: 'Space Grotesk';
+  }
+  .clear{
+    color: darkblue;
+    text-decoration: underline;
   }
 }
+
+
 
 
 @media (max-width: 390px) {

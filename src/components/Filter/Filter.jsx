@@ -13,12 +13,13 @@ function Filter({setGender,setSpecies,setStatus,setPageNumber}) {
   }
 
   // clear filter section
-  const clear = () => {
+  function clearFilter(e){
     setStatus("");
     setGender("");
     setSpecies("");
     setPageNumber(1);
-    window.location.reload(false);
+    e.preventDefault()
+    // window.location.reload(false);
   };
   //
   return (
@@ -30,9 +31,12 @@ function Filter({setGender,setSpecies,setStatus,setPageNumber}) {
   
           {isOpen?(
             <div className={css.options}>
-              <Gender setGender={setGender} />,
-              <Species setSpecies={setSpecies}/>,
+              <Gender setGender={setGender} />
+              <Species setSpecies={setSpecies}/>
               <Status setStatus={setStatus}/>
+              <button 
+              className={css.clear}
+              onClick={clearFilter}>Clear Filter</button>
 
             </div>
           ):(
