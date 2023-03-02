@@ -5,10 +5,10 @@ import Navbar from './components/Navbar/Navbar';
 import Characters from './components/Characters/Characters'
 import Locations from './components/Locations/Locations'
 import Episodes from './components/Episodes/Episodes';
-import Example from './components/Example';
-import './global.module.scss'
+import './global.scss'
+import './Index.css'
 import Foot from './components/Footer/Foot';
-import Example2 from './components/Example2';
+import Residents from './components/Residents/Residents';
 
 function App() {
 
@@ -23,12 +23,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Characters />}/>
         <Route path='/Locations' element={<Locations />}/>
-        <Route path="/Location/:id" element={<Example2 />}/>
+        <Route path="/Location/:id" element={<Residents />}/>
         <Route path='/Episodes' element={<Episodes/>}/>
       </Routes>
       <Foot/>
-      <Example/>
-      {/* <Example2/> */}
+      
 
     </Router>
     </>

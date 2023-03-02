@@ -1,7 +1,7 @@
 @import '../../global.scss';
 
 .wrapper{
-  margin-top:50px;
+  margin-top: 50px;
 
   .heading{
     display: flex;
@@ -9,23 +9,38 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    // margin-bottom: 50px;
     >:nth-child(1){
-     
-      color: $primary;
+      color: darkblue;
     }
-    >:nth-child(2){
+
+    .text{
       @media (max-width: $sm) {
         font-size: 1.1rem;
-        line-height: 10px;
+        line-height: 25px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: $secondary;
       }
       line-height: 30px;
       font-size: 1.3rem;
       font-weight: 400;
       color: $secondary;
+
+      // .blue{
+      //   color: darkblue;
+        
+      // }
+      // .red{
+      //   color: red;
+      // }
+      // .green{
+      //   color: green;
+      // }
     }
   }
+
   .body{
+    
     border: 1px solid violet;
     display: flex;
     align-items: center;
@@ -34,19 +49,18 @@
     padding-left: 50px;
     padding-right: 50px;
     .card{
+      height: fit-content;
       margin: 10px;
       border: 1px solid darkblue;
       border-radius: 10px;
-      >img{
-        width: 100px;
-      }
     }
   }
   .pagination{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;  
+    margin-top: 20px;
+    
   }
+  
 }
-

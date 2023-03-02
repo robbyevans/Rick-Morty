@@ -1,4 +1,4 @@
-@import '../../global.module.scss';
+@import '../../global.scss';
 
 .wrapper{
   margin-top: 50px;
@@ -40,6 +40,24 @@
       margin: 10px;
       border: 1px solid darkblue;
       border-radius: 10px;
+      position: relative;
+      .badge{
+        position: absolute;
+        color: #fff;
+        padding: 2px;
+        padding-left: 15px;
+        padding-right: 10px;
+        border: 1px solid white;
+        top: 5px;
+        right: 0px;
+        font-size: 17px;
+        width: 80px;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        // background-color: green;
+       
+      }
+   
     }
   }
   .pagination{
@@ -49,4 +67,5 @@
     margin-top: 20px;
     
   }
+
 }

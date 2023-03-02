@@ -26,51 +26,6 @@ function Characters() {
   },[locationId])
 
 
-  //test facility do not tamper !!! dangerous
-
-
-//  const api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${nameSearch}&status=${status}&gender=${gender}&species=${species}`;
-
-//   useEffect(()=>{
-
-//     if(locationID){
-//       console.log("data from location card is firing now"),
-//       (async function () {
-//           let data = await fetch(`https://rickandmortyapi.com/api/location/${locationID}`).then((res) => res.json());
-//             // setData(data.residents);
-//             // console.log(data)
-//             // console.log(data.residents)
-//               let a = await Promise.all(
-//           data.residents.map((x) => {
-//            return fetch(x).then((res) => res.json());
-//          })
-//        );
-//       setData(a);
-//           })();
-//           // setlocationID(false)
-       
-//     }
-//     else{
-//       console.log("Data form api/characters is firing"),
-//       (async function () {
-//         let data = await fetch(api).then((res) => res.json());
-//         setData(data.results);
-//       })();
-//       // setlocationID(false)
-//     }
-//   },[locationId])
-
-//   console.log(data)
-//   // console.log(results)
-
-// //*****//end of test facility///**** */
-
-
- 
-
-  
-  
- 
 
 //pagination
   function handleChange(e,p){
@@ -114,6 +69,21 @@ function Characters() {
                  imgAlt="picture of a Rick & Mort character"
                  imgSrc={data.image}
                >
+                  {/* test facility */}
+                  {(() => {
+          if (data.status === "Dead") {
+            return <div className={`${css.badge} redColor `}>{data.status}</div>;
+          }
+           else if (data.status === "Alive") {
+            return <div className={`${css.badge} greenColor `}>{data.status}</div>;
+          } 
+          else {
+            return <div className={` ${css.badge} greyColor `}>{data.status}</div>;
+          }
+        })()}
+                  {/* end of test facility */}
+
+
                  <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                    {data.name}
                  </h5>

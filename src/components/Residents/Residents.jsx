@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import css from './Characters/Characters.module.scss'
+import css from './Residents.module.scss'
 import {Card} from 'flowbite-react'
 
-function Example2() {
+function Residents() {
 
   let locationId=(useParams().id);
   console.log(locationId)
@@ -45,10 +45,10 @@ function Example2() {
   return (
     <div className={css.wrapper}>
                          <div className={css.heading}>
-        <span className={css.secondaryText} >Location: {data.name}</span>
-        <span className={css.secondaryText} >Type: {data.type}</span>
-        <span className={css.secondaryText} >Dimension:{data.dimension}</span>
-        <span className={css.secondaryText} >Residents:{}</span>
+        <span className={css.secondaryText} >Location: <span className={css.red}>{data.name}</span></span>
+        <span className={css.text} >Type: <span className={css.green}>{data.type}</span></span>
+        <span className={css.text} >Dimension:<span className={css.red}>{data.dimension}</span></span>
+        <span className={css.text} >Residents:{}</span>
       </div>
       
 
@@ -99,4 +99,4 @@ function Example2() {
   )
 }
 
-export default Example2
+export default Residents
