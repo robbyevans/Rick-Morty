@@ -44,24 +44,25 @@ function Locations() {
 
 
   {
-    data.map((data,i)=>{
+    data.map((data)=>{
+      let{id,name,type,dimension,residents}=data;
         return( <div className={css.card}>
            <div className="max-w-sm">
              <Link
                style={{ textDecoration: "none" }}
-               key={i}
-               to={`/${i}`}
+               key={id}
+               to={`/location/${id}`}
              >
                <Card
                 imgAlt="picture of a Rick & Mort character"
                  imgSrc='./rick-galaxy.webp'
                     >
                       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                       {data.name}
+                       {name}
                       </h5>
-                      <p>type: {data.type}</p>
-                      <p>dymension: {data.dimension}</p>
-                      <p>residents: {data.residents.length}</p>
+                      <p>type: {type}</p>
+                      <p>dymension: {dimension}</p>
+                      <p>residents: {residents.length}</p>
                       {/* <p className="font-normal text-gray-700 dark:text-gray-400">
                        Origin:{data.origin.name}
                       </p> */}

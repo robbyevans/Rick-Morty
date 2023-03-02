@@ -5,13 +5,15 @@ import {Card} from 'flowbite-react'
 
 function Example2() {
 
-  let locationId=useParams().id;
+  let locationId=(useParams().id);
   console.log(locationId)
 
   
   
   const [data, setData] = useState([])
   const [results, setResults] = useState([])
+
+
   
 
 
@@ -21,29 +23,34 @@ function Example2() {
     (async function () {
 
       let outPut = await fetch(`https://rickandmortyapi.com/api/location/${locationId}`).then((res) => res.json());
-      setData(outPut.residents);
+      setData(outPut);
       
-  
+    
            let a = await Promise.all(
-        data.residents.map((x) => {
+        outPut.residents.map((x) => {
           return fetch(x).then((res) => res.json());
         })
       );
       setResults(a);
+      console.log(results)
      
 
     })();
 
-     //clear data in state to prevent accumulation 
 
     
   }, []);
+
+  
   return (
     <div className={css.wrapper}>
-       {/* <div className={css.heading}>
-        <span className={css.secondaryText} >Rick & Morty.</span>
-        <span className={css.secondaryText} >All your Rick & morty characters in one place</span>
-      </div> */}
+                         <div className={css.heading}>
+        <span className={css.secondaryText} >Location: {data.name}</span>
+        <span className={css.secondaryText} >Type: {data.type}</span>
+        <span className={css.secondaryText} >Dimension:{data.dimension}</span>
+        <span className={css.secondaryText} >Residents:{}</span>
+      </div>
+      
 
       {/* search component */}
       {/* <Search setNameSearch={setNameSearch} setPageNumber={setPageNumber}/> */}
@@ -53,21 +60,24 @@ function Example2() {
 
         {
          results.map((data)=>{
+          let{name, location, origin, gender, image, status, species}=data
             
            return( <div className={` ${css.card}`}>
+
              <div className="max-w-sm">
+             
                <Card
                  imgAlt="picture of a Rick & Mort character"
-                 imgSrc={data.image}
+                 imgSrc={image}
                >
                  <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                   {data.name}
+                   {name}
                  </h5>
-                 <p>Status: {data.status}</p>
-                 <p>Species: {data.species}</p>
-                 <p>Gender: {data.gender}</p>
+                 <p>Status: {status}</p>
+                 <p>Species: {species}</p>
+                 <p>Gender: {gender}</p>
                  <p className="font-normal text-gray-700 dark:text-gray-400">
-                   Origin:{data.origin.name}
+                   Origin:{origin.name}
                  </p>
                </Card>
                </div>

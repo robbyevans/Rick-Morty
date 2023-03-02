@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Characters />}/>
         <Route path='/Locations' element={<Locations />}/>
-        {/* <Route path="/:id" element={<Example2 />}/> */}
+        <Route path="/Location/:id" element={<Example2 />}/>
         <Route path='/Episodes' element={<Episodes/>}/>
       </Routes>
       <Foot/>
