@@ -1,0 +1,50 @@
+@import '../../global.scss';
+
+.wrapper{
+  @media 
+  (max-width: 500px) {
+    position:relative;
+    // border: 1px solid red;
+ 
+    
+    >button{
+      position: absolute;
+     margin-top: 55px;
+     margin-right: -20px;
+     max-width: 45px;
+     max-height: 35px;
+ 
+    }
+
+  }
+  margin-bottom: 50px;
+  position: relative;
+
+  >button{
+    border-radius: 5px;
+    position: absolute;
+    right: 80px;
+    top: -77px;
+    
+    color: darkblue;
+    // background-color: darkblue;
+    .icon{
+      width:40px;
+      height: 44px;
+      margin-right: 5px;
+    }
+  }
+}
+
+
+@media (max-width: 390px) {
+  .wrapper{
+    position: relative;
+    >button{
+      position: absolute;
+      // padding-left:70px;
+      margin-right: -70px;
+      // right:50px;
+    }
+  }
+}

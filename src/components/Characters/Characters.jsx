@@ -4,6 +4,7 @@ import css from './Characters.module.scss'
 import {Card} from 'flowbite-react'
 import Pagination from "@mui/material/Pagination"
 import Search from '../Search/Search';
+import Filter from '../Filter/Filter'
 
 
 function Characters() {
@@ -14,34 +15,26 @@ function Characters() {
   const [gender, setGender] = useState("");
   const [species, setSpecies] = useState("");
   const [data, setData] = useState([]);
-  const [locationID, setlocationID] = useState("")
   let [results, setResults] = React.useState([]);
   
-  //location filter
-  // setlocationID(locationId)
-  let locationId=useParams();
-  useEffect(()=>{
-    setlocationID(locationId.id)
-    console.log(locationID)
-  },[locationId])
 
 
 
-//pagination
-  function handleChange(e,p){
-    console.log(e,p)
-    setPageNumber(p)
-  }
-  
 
-/***solid plan dont touch */
+      //pagination
+         function handleChange(e,p){
+             setPageNumber(p)
+           }
+
+
+  /*on loading */
   {const api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${nameSearch}&status=${status}&gender=${gender}&species=${species}`;
   useEffect(() => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
       setData(data.results);
     })();
-    setlocationID(false)
+
   }, [api]);
   }
 
@@ -56,12 +49,15 @@ function Characters() {
 
       {/* search component */}
       <Search setNameSearch={setNameSearch} setPageNumber={setPageNumber}/>
-      {/* search component */}
+
+      {/* filter component */}
+      <Filter/>
+
 
       <div className={css.body}>
 
         {
-         data.map((data)=>{
+         data && data.map((data)=>{
             
            return( <div className={` ${css.card}`}>
              <div className="max-w-sm">
@@ -87,7 +83,7 @@ function Characters() {
                  <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                    {data.name}
                  </h5>
-                 <p>Status: {data.status}</p>
+                 {/* <p>Status: {data.status}</p> */}
                  <p>Species: {data.species}</p>
                  <p>Gender: {data.gender}</p>
                  <p className="font-normal text-gray-700 dark:text-gray-400">

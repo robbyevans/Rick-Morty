@@ -14,7 +14,7 @@ function Navbar() {
           <div className={css.navlink}>
             <NavLink className={css.btn}  to="/">Characters</NavLink>
             <NavLink className={css.btn}  to="/Locations">Locations</NavLink>
-            <NavLink className={css.btn}  to="/Episodes">Episodes</NavLink>
+            {/* <NavLink className={css.btn}  to="/Episodes">Episodes</NavLink> */}
           </div>
           
     </div>
