@@ -51,7 +51,7 @@ function Characters() {
       <Search setNameSearch={setNameSearch} setPageNumber={setPageNumber}/>
 
       {/* filter component */}
-      <Filter/>
+      <Filter setGender={setGender} setSpecies={setSpecies} setStatus={setStatus} setPageNumber={setPageNumber}/>
 
 
       <div className={css.body}>

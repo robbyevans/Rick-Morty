@@ -4,31 +4,29 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function Gender({setGender}) {
-  const [number, setNumber] = React.useState('');
+export default function Example() {
+  const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
-    setGender(event.target.value);
-    setNumber("not important")
+    setAge(event.target.value);
   };
 
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-      <InputLabel id="demo-select-small">Gender</InputLabel>
+      <InputLabel id="demo-select-small">Age</InputLabel>
       <Select
         labelId="demo-select-small"
         id="demo-select-small"
-        value={""}
+        value={age}
         label="Age"
         onChange={handleChange}
       >
         <MenuItem value="">
           <em>None</em>
         </MenuItem>
-        <MenuItem value={"male"}>Male</MenuItem>
-        <MenuItem value={"female"}>Female</MenuItem>
-        <MenuItem value={"genderless"}>genderless</MenuItem>
-        <MenuItem value={"unkown"}>Unkown</MenuItem>
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
       </Select>
     </FormControl>
   );
