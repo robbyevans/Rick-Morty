@@ -3,6 +3,7 @@ import css from './Filter.module.scss'
 import { BsFilterRight } from 'react-icons/bs';
 import Gender from './Gender';
 import Species from './Species';
+import Status from './Status';
 
 function Filter({setGender,setSpecies,setStatus,setPageNumber}) {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,7 +31,9 @@ function Filter({setGender,setSpecies,setStatus,setPageNumber}) {
           {isOpen?(
             <div className={css.options}>
               <Gender setGender={setGender} />,
-              <Species setSpecies={setSpecies}/>
+              <Species setSpecies={setSpecies}/>,
+              <Status setStatus={setStatus}/>
+
             </div>
           ):(
             null

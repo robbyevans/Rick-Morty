@@ -18,7 +18,7 @@ export default function Gender({setGender}) {
       <Select
         labelId="demo-select-small"
         id="demo-select-small"
-        value={""}
+        // value={""}
         label="Age"
         onChange={handleChange}
       >
