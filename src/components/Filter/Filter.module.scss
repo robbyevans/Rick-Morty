@@ -38,6 +38,9 @@
     align-items: center;
     justify-content: center;
     padding-top: 30px;
+    @media(max-width: $sm),(max-width: $md){
+     flex-direction: column; 
+    }
   }
   .formControl {
     font-family: "Space Grotesk";
