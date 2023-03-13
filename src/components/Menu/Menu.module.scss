@@ -16,9 +16,11 @@
     width: 60px;
   }
   .navlink {
+    display: block;
     position: absolute;
     right: 20px;
     @media (max-width: $sm), (max-width: $md) {
+      // display: none;
       padding: 10px;
     }
     display: flex;
@@ -34,4 +36,24 @@
       text-decoration: underline;
     }
   }
+  // .menu{
+  //   @media (max-width: $sm){
+  //     display: flex;
+  //     position: absolute;
+  //     top: 10px;
+  //     right: 20px;
+  //     height: 40px;
+  //     width: 34px;
+  //     .hamburger{
+  //       border: 1px solid red;
+  //       display: flex;
+  //       flex-direction: row;
+  //     }
+  //   }
+  //   display: none;
+  //   .hamburger{
+  //    display: none; 
+  //   }
+   
+  // }
 }
