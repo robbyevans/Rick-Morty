@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import css from "./Navbar.module.scss";
+import css from "./Menu.module.scss";
 // import {Button} from 'flowbite-react'
 
-function Navbar() {
+function Menu() {
   return (
     <div className={css.wrapper}>
       <span className={css.logo}>
@@ -24,4 +24,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Menu;
