@@ -1,11 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import css from "./Menu.module.scss";
-import { TfiMenu } from 'react-icons/tfi';
+// import { TfiMenu } from 'react-icons/tfi';
 
-
-// import {Button} from 'flowbite-react'
 
 function Menu() {
   const [isOpen, setIsOpen] = useState(false)

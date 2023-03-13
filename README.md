@@ -32,15 +32,15 @@ This is a web application that displays all rick and morty characters and locati
 
 ## Locations Page
 
-- Create a `Locations` page that displays a list of [`locations`](https://rickandmortyapi.com/documentation/#location). 
-- Each `LocationCard` should display the `name`, `type`, and `dimension`, and `number_of_residents` values.
+- Contains a `Locations` page that displays a list of [`locations`](https://rickandmortyapi.com/documentation/#location). 
+- Each `LocationCard`  displays the `name`, `type`, and `dimension`, and `number_of_residents` values.
 - W
 ## Search and Filter Component
 - Implements filtering of the [catalog](https://rickandmortyapi.com/documentation/#filter-characters) by `status`, `species`, and `gender`.
 
 
 ## Technologies used
-- Vite JS 
+- Vite 
 - ReactJS 
 - Saas-styling
 - React Routing Library
@@ -63,7 +63,7 @@ This is a web application that displays all rick and morty characters and locati
 
 ## Known Bugs
 
-- 1) Non Responsive width for screens of (min-width:400px)
+- 1) None
 
 ## Support and contact details
 

@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Characters />} />
           <Route path="/Locations" element={<Locations />} />
           <Route path="/Location/:id" element={<Residents />} />
-          <Route path="/Episodes" element={<Episodes />} />
+          {/* <Route path="/Episodes" element={<Episodes />} /> */}
         </Routes>
         <Foot />
         {/* <BasicModal/> */}
